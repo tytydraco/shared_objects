@@ -23,4 +23,14 @@ class SharedString extends SharedObjectBase<String> {
     final instance = await _sharedPrefs;
     return instance.getString(id);
   }
+
+  /// Append some text to the current string.
+  ///
+  /// If the current string is null, set the current string to the new text.
+  Future<void> append(String text) async {
+    await mutate((initial) {
+      if (initial == null) return text;
+      return initial + text;
+    });
+  }
 }

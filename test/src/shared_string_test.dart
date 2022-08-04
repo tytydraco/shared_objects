@@ -37,6 +37,14 @@ void main() {
       );
     });
 
+    test('Append', () async {
+      await sharedString.append(' with new text');
+      expect(
+        await sharedString.get(),
+        'new_value with new text',
+      );
+    });
+
     test('Delete value', () async {
       await sharedString.set(null);
 
