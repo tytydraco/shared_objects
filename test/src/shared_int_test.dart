@@ -16,7 +16,7 @@ void main() {
 
     test('Set new value', () async {
       await expectLater(
-            () => sharedInt.set(123),
+        () => sharedInt.set(123),
         returnsNormally,
       );
     });
@@ -31,6 +31,32 @@ void main() {
     });
 
     test('Ensure stored value is accurate', () async {
+      expect(
+        await sharedInt.get(),
+        123,
+      );
+    });
+
+    test('Arithmetic operations', () async {
+      await sharedInt.add(100);
+      expect(
+        await sharedInt.get(),
+        223,
+      );
+
+      await sharedInt.sub(100);
+      expect(
+        await sharedInt.get(),
+        123,
+      );
+
+      await sharedInt.mul(2);
+      expect(
+        await sharedInt.get(),
+        246,
+      );
+
+      await sharedInt.div(2);
       expect(
         await sharedInt.get(),
         123,

@@ -37,6 +37,32 @@ void main() {
       );
     });
 
+    test('Arithmetic operations', () async {
+      await sharedDouble.add(100);
+      expect(
+        await sharedDouble.get(),
+        within(distance: 0.01, from: 101.23),
+      );
+
+      await sharedDouble.sub(100);
+      expect(
+        await sharedDouble.get(),
+        within(distance: 0.01, from: 1.23),
+      );
+
+      await sharedDouble.mul(2);
+      expect(
+        await sharedDouble.get(),
+        within(distance: 0.01, from: 2.46),
+      );
+
+      await sharedDouble.div(2);
+      expect(
+        await sharedDouble.get(),
+        within(distance: 0.01, from: 1.23),
+      );
+    });
+
     test('Delete value', () async {
       await sharedDouble.set(null);
 

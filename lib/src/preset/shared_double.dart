@@ -1,8 +1,9 @@
-import 'package:shared_objects/src/shared_object_base.dart';
+import 'package:shared_objects/src/base/shared_num_ops_mixin.dart';
+import 'package:shared_objects/src/base/shared_object_base.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// A [double] that is directly integrated with [SharedPreferences].
-class SharedDouble extends SharedObjectBase<double> {
+class SharedDouble extends SharedObjectBase<double> with SharedNumOpsMixin {
   /// Creates a new [SharedDouble] given an [id].
   SharedDouble(super.id);
 

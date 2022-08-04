@@ -1,8 +1,9 @@
-import 'package:shared_objects/src/shared_object_base.dart';
+import 'package:shared_objects/src/base/shared_num_ops_mixin.dart';
+import 'package:shared_objects/src/base/shared_object_base.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// An [int] that is directly integrated with [SharedPreferences].
-class SharedInt extends SharedObjectBase<int> {
+class SharedInt extends SharedObjectBase<int> with SharedNumOpsMixin {
   /// Creates a new [SharedInt] given an [id].
   SharedInt(super.id);
 

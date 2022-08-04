@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_objects/src/shared_string.dart';
+import 'package:shared_objects/src/preset/shared_string.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

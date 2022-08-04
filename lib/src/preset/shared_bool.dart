@@ -1,4 +1,4 @@
-import 'package:shared_objects/src/shared_object_base.dart';
+import 'package:shared_objects/src/base/shared_object_base.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// A [bool] that is directly integrated with [SharedPreferences].
