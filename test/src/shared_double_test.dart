@@ -41,25 +41,31 @@ void main() {
       await sharedDouble.add(100);
       expect(
         await sharedDouble.get(),
-        within(distance: 0.01, from: 101.23),
+        within(distance: 0.0001, from: 101.23),
       );
 
       await sharedDouble.sub(100);
       expect(
         await sharedDouble.get(),
-        within(distance: 0.01, from: 1.23),
+        within(distance: 0.0001, from: 1.23),
       );
 
       await sharedDouble.mul(2);
       expect(
         await sharedDouble.get(),
-        within(distance: 0.01, from: 2.46),
+        within(distance: 0.0001, from: 2.46),
       );
 
       await sharedDouble.div(2);
       expect(
         await sharedDouble.get(),
-        within(distance: 0.01, from: 1.23),
+        within(distance: 0.0001, from: 1.23),
+      );
+
+      await sharedDouble.pow(2);
+      expect(
+        await sharedDouble.get(),
+        within(distance: 0.0001, from: 1.5129),
       );
     });
 

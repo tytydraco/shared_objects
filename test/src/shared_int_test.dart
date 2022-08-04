@@ -61,6 +61,12 @@ void main() {
         await sharedInt.get(),
         123,
       );
+
+      await sharedInt.pow(2);
+      expect(
+        await sharedInt.get(),
+        15129,
+      );
     });
 
     test('Delete value', () async {

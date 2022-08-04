@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:shared_objects/shared_objects.dart';
 
 /// Arithmetic operations for a numerical [SharedObjectBase].
@@ -41,6 +43,14 @@ mixin SharedNumOpsMixin<T extends num> on SharedObjectBase<T> {
       result = initial / value;
     }
 
+    await set(result as T);
+  }
+
+  /// Raise the current value to a numerical value exponent.
+  Future<void> pow(T value) async {
+    final initial = await get();
+    if (initial == null) return;
+    final result = math.pow(initial, value);
     await set(result as T);
   }
 }
