@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:shared_objects/shared_objects.dart';
+import 'package:shared_objects/src/base/shared_object_base.dart';
 
 /// Arithmetic operations for a numerical [SharedObjectBase].
 mixin SharedNumOpsMixin<T extends num> on SharedObjectBase<T> {

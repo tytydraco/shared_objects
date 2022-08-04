@@ -1,5 +1,5 @@
 name: shared_objects
-description: A wrapped around shared_preferences to streamline persistable data.
+description: A wrapper around shared_preferences to streamline persistable data.
 version: 1.0.0
 repository: https://github.com/tytydraco/shared_objects
 
