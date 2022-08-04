@@ -37,6 +37,36 @@ void main() {
       );
     });
 
+    test('Add', () async {
+      await sharedStringList.add('4');
+      expect(
+        await sharedStringList.get(),
+        ['1', '2', '3', '4'],
+      );
+
+      await sharedStringList.addAll(['5', '6', '7']);
+      expect(
+        await sharedStringList.get(),
+        ['1', '2', '3', '4', '5', '6', '7'],
+      );
+    });
+
+    test('Remove', () async {
+      var removed = await sharedStringList.remove('4');
+      expect(
+        await sharedStringList.get(),
+        ['1', '2', '3', '5', '6', '7'],
+      );
+      expect(removed, true);
+
+      removed = await sharedStringList.remove('nonexistent');
+      expect(
+        await sharedStringList.get(),
+        ['1', '2', '3', '5', '6', '7'],
+      );
+      expect(removed, false);
+    });
+
     test('Delete value', () async {
       await sharedStringList.set(null);
 

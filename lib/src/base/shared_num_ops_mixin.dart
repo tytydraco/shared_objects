@@ -39,7 +39,7 @@ mixin SharedNumOpsMixin<T extends num> on SharedObjectBase<T> {
     });
   }
 
-  /// Raise the current value to a numerical value exponent.
+  /// Raise the current value to a numerical value exponent. See [math.pow].
   Future<void> pow(T value) async {
     await mutate((initial) {
       if (initial == null) return initial;
