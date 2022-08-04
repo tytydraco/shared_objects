@@ -28,13 +28,8 @@ The `shared_objects` package aims to reduce that boilerplate code into a more co
 import 'package:shared_objects/shared_objects.dart';
 
 final value = SharedString('name');
-await
-value.set('
-newValue
-'
-);
-await
-value.get();
+await value.set('newValue');
+await value.get();
 ```
 
 # Getting started
