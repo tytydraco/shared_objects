@@ -1,0 +1,19 @@
+name: shared_objects
+description: A wrapped around shared_preferences to streamline persistable data.
+version: 1.0.0+1
+repository: https://github.com/tytydraco/shared_objects
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: any
+
+flutter:
+  uses-material-design: true
