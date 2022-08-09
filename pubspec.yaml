@@ -1,6 +1,6 @@
 name: shared_objects
 description: A wrapper around shared_preferences to streamline persistable data.
-version: 1.0.0+1
+version: 1.0.1
 repository: https://github.com/tytydraco/shared_objects
 
 environment:
